@@ -64,8 +64,7 @@ Autem nesciunt vero sequi magnam velit. Unde totam est tempore, dolores aut odio
 <a href="https://en.wikipedia.org/wiki/Wolf">Link</a>
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Kolm%C3%A5rden_Wolf.jpg" alt="img" />
-</body>
-</html>
+
 
 <!-- Block level element -->
 <p style="background-color:red";">This is para</p>
@@ -104,6 +103,131 @@ Autem nesciunt vero sequi magnam velit. Unde totam est tempore, dolores aut odio
 <!-- header -->
 <!-- main -->
 <!-- navbar -->
+
+
+<!-- Table -->
+
+<table>
+
+  <thead>
+    <tr>
+      <th>Fruits</th>
+      <th>Fruits</th>
+      <th>Fruits</th>
+    </tr>
+  </thead>
+ 
+  <tbody>
+    <tr>
+      <td>Banana</td>
+      <td>Apple</td>
+      <td>Orange</td>
+    </tr>
+    
+    <tr>
+      <td>Banana</td>
+      <td>Apple</td>
+      <td>Orange</td>
+    </tr>
+  </tbody>
+  
+  
+</table>
+
+
+
+<table style="border: 1px solid red;">
+
+  <thead>
+    <tr>
+      <th style="border: 1px solid red;" rowspan="2">Fruits</th>
+      <th style="border: 1px solid red;" colspan="2">Fruits Salad</th>
+      <th style="border: 1px solid red;" rowspan="2">Fruits</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr >
+      <td style="border: 1px solid red;">Banana</td>
+      <td style="border: 1px solid red;">Apple</td>
+      <td style="border: 1px solid red;">Orange</td>
+    </tr>
+
+    <tr>
+      <td style="border: 1px solid red;">Banana</td>
+      <td style="border: 1px solid red;">Apple</td>
+      <td style="border: 1px solid red;">Orange</td>
+    </tr>
+  </tbody>
+
+
+</table>
+
+
+<form action="/register">
+
+  <label for="name">Enter name</label>
+  <input type="text" name="name" id="name" />
+
+  <label for="pwd">Enter password</label>
+  <input type="password" name="pwd" id="pwd" />
+  
+  <button type="button" >Submit</button>
+  <button type="submit">Submit</button>
+  <input type="submit" value="Click me">
+
+
+</form>
+
+
+<!-- https://www.reddit.com/search/?q=india -->
+<form action="https://www.reddit.com/search/">
+  <label for="q">Reddit search...</label>
+  <input type="text" name="q" id="q" />
+  <button type="submit">Submit</button>
+</form>
+
+
+
+<!-- https://www.youtube.com/results?search_query=dog -->
+<form action="https://www.youtube.com/results/">
+  <label for="search_query">Youtube search...</label>
+  <input type="text" name="search_query" id="search_query" />
+  <button type="submit">Submit</button>
+</form>
+
+
+
+<!-- More inputs -->
+<form action="/birds">
+  <label for="agrre">I agree</label>
+  <input type="checkbox" name="agree_to" id="agree" checked />
+
+  <p>
+    <label for="g">Select gender</label>
+    <input type="radio" name="gender" value="male" id="g">
+      <input type="radio" name="gender" value="female" id="g">
+  </p>
+
+    <p>
+      <label for="c">Select city</label>
+      <select name="city" id="c">
+        <option value="">Please select</option>
+        <option value="guwahati" selected> Guwahati</option>
+        <option value="tezpur"> Tezpur</option>
+
+      </select>
+    </p>
+
+  <button type="submit">Submit</button>
+
+
+</form>
+
+
+</body>
+
+</html>
 
 
 
