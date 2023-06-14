@@ -219,11 +219,87 @@ Autem nesciunt vero sequi magnam velit. Unde totam est tempore, dolores aut odio
       </select>
     </p>
 
-  <button type="submit">Submit</button>
+    <p>
+      <label for="cheese">Amount of Cheese</label>
+      <input name="cheese_amount" value="18" type="range" id="cheese" min="10" max="20">
+    </p>
 
+    <p>
+      <input type="number" placeholder="enter a number" name="num" min="1" max="50" step="5">
+    </p>
+
+    <p>
+      <label for="essay">Write an essay</label>
+      <br>
+      <textarea name="essay" id="essay" cols="30" rows="10"></textarea>
+    </p>
+
+
+  <button  type="submit">Submit</button>
 
 </form>
 
+
+<!-- Form Validation -->
+<form action="/dummy">
+  <label for="first">Enter first name</label>
+  <input type="text" name="first" id="first" required>
+
+  <br>
+
+  <label for="username">Username</label>
+  <input type="text" id="username" name="username" minlength="5" maxlength="10">
+
+  <input type="url">
+
+  <button>Submit</button>
+</form>
+
+
+<!-- Form Exercise -->
+<h1>Race Registration!</h1>
+<form action="/test">
+<div>
+  <label for="fname">First name</label>
+  <input type="text" id="fname" name="fname">
+
+  <label for="lname">Last name</label>
+  <input type="text" id="lname" name="lname">
+</div>
+
+
+<div>
+  Select a Company <br>
+  <input type="radio" id="apple" name="company" value="apple">
+  <label for="apple">Apple</label>
+
+  <br>
+
+  <input type="radio" id="samsung" name="company" value="samsung">
+  <label for="samsung">Samsung</label>
+
+</div>
+
+<div>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email">
+
+    <label for="pwd">Password</label>
+    <input type="password" id="pwd" name="password">
+</div>
+
+<div>
+  Select age:
+  <select name="age" id="age">
+    <option value="">Please select</option>
+    <option value="18" selected> 18</option>
+    <option value="20"> 20</option>
+  
+  </select>
+</div>
+
+<button type="submit">Register</button>
+</form>
 
 </body>
 
