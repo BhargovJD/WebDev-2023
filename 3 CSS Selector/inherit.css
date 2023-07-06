@@ -1,0 +1,8 @@
+.parent {
+    color: red;
+    font-size: 20px;
+}
+
+.child {
+    text-decoration: underline;
+}

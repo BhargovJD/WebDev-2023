@@ -1,0 +1,133 @@
+/* Univarsal selector */
+/* *{
+    color: pink;
+} */
+
+
+/* Element Sel. */
+/* p{
+ color: gray;
+} */
+
+/* h1,h2{
+    color: blue;
+} */
+
+
+/* https: //colorhunt.co/ */
+/* https: //coolors.co/dbc2cf-9fa2b2-3c7a89-2e4756-16262e */
+
+
+body{
+    background-color: #3C7A89;
+    color: white;
+}
+
+button{
+    font-size: 30px;
+    background-color: azure;
+}
+
+h1,h2{
+    color:#fefae0
+}
+
+#signup{
+    background-color: #ffb703;
+}
+
+span{
+    color:aquamarine;
+}
+.tag{
+    background-color: #ffafcc;
+    color: black;
+}
+
+/* Nested/ Descendant selector */
+
+span a {
+    color: whitesmoke;
+}
+
+footer a {
+    color: #ffe6a7;
+}
+
+/* Adjacent selector */
+/* immediately next */
+input+button{
+    background-color: pink;
+}
+h2+button{
+    font-size: 20px;
+    background-color: magenta;
+}
+
+/* Direct child: One level down */
+footer > a{
+    color: white;
+}
+
+/* Attribute selector. */
+
+input[type="password"]{
+    color: greenyellow;
+}
+section[class="post"]{
+    background-color: purple;
+}
+/* or */
+/* section.post {
+    background-color: pink;
+} */
+
+/* Contain exactly google */
+a[href*="google"]{
+    color:magenta;
+}
+
+
+/* Pseodo classes */
+/* in different state. ex: hover */
+/* button:hover{
+    background-color: red;
+    color: whitesmoke;
+} */
+.post button:hover{
+    background-color: red;
+    color: #ffe6a7;
+}
+
+
+/* Only 3rd element */
+/* .post:nth-of-type(3){
+    background-color: violet;
+} */
+
+/* Every 3rd element */
+.post:nth-of-type(3n) {
+    background-color: violet;
+}
+
+
+/* Pseodo elements */
+h2::first-letter{
+    font-size: 50px;
+}
+
+p::first-line {
+    color: purple;
+}
+
+p::selection {
+    background-color: #ffb703;
+}
+
+
+/* ignore all and use this css */
+button{
+    background-color: yellow !important;
+}
+
+
