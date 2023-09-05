@@ -1,0 +1,136 @@
+/* body{
+    margin: 0;
+} */
+#one{
+    height: 200px;
+    width: 200px;
+    background-color: aqua;
+
+    /* Border */
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+
+}
+
+
+#two {
+    height: 200px;
+    width: 200px;
+    background-color:bisque;
+
+    /* Border */
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    box-sizing: border-box;
+    border-left-color: blue;
+
+}
+
+
+#three {
+    height: 200px;
+    width: 200px;
+    background-color: bisque;
+
+    /* Border- one go*/
+    border: 4px solid black;
+    border-left-style: dotted;
+    border-radius: 10px;
+
+    /* Padding in Green Color */
+    padding-left: 200px;
+}
+
+h1{
+    background-color: brown;
+    color: white;
+    padding-left: 100px;
+    /* display: none; */
+
+    /* Margin in Orange Color */
+    margin-bottom: 0;
+}
+
+#btn{
+    padding: 20px;
+}
+
+/* TB LR */
+#btn2 {
+    padding: 0px 80px;
+}
+
+
+/* Display */
+#four {
+background-color: bisque;
+border: 1px solid black;
+
+/* Previously BLOCK */
+display: inline;
+}
+
+/* #five {
+    background-color: bisque;
+} */
+
+#sp{
+    background-color: palegreen;
+    border: 1px solid black;
+
+    /* Previously INLINE */
+    display: block;
+}
+
+#spn{
+    background-color: red;
+    /* padding: 50px;
+    margin: 100px; */
+}
+
+/* inline-block takes width and height, margin padding also */
+
+section{
+    background-color: bisque;
+    width: 800px;
+    height: 800px;
+    font-size: 30px;
+}
+
+#inside{
+    background-color:tomato;
+    width: 50%;
+    height: 50%;
+
+    /* 2x size of paren div(section) */
+    font-size: 2em;
+}
+
+h2{
+    font-size: 40px;
+    border: 1px solid black;
+    line-height: 200%;
+        /* 200% of current element font-size */
+    margin-left: 2em;
+        /* 2em of current element font-size */
+}
+
+button{
+    font-size: 1em;
+    padding: 0 1em;
+            /* em of current element font-size */
+    border-radius: 0.5em;
+            /* em of current element font-size */
+    background-color: aquamarine;
+    columns: black;
+}
+
+#rems{
+    /* rems refer to root element */
+    background-color: antiquewhite;
+}
+#rems h3{
+    font-size: 1rem;
+}
