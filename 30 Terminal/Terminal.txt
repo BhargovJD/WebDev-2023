@@ -1,0 +1,13 @@
+$ cd ..
+$ cd 30\ Terminal/
+$ ls
+$ pwd
+$ cd ~ (Home Dir)
+$ mkdir Goat 
+$ mkdir Goat Goat1
+$ mkdir ../Goat (Up from current dir.)
+$ ls -l
+$ ls -a
+$ touch bjd.txt
+$ rm bjd.txt
+$ node nodee.js (Running a js file in node)
