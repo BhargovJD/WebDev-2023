@@ -1,0 +1,6 @@
+npm init -y
+npm i express
+npm i ejs
+node index.js
+npm i nodemon
+nodemon index.js
