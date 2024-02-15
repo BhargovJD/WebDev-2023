@@ -3,6 +3,8 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 
+
+
 const express = require('express');
 // const app = express();
 const path = require('path');
@@ -20,6 +22,12 @@ const flash = require('connect-flash');
 const passport = require('passport');
 const LocalStrategy = require('passport-local');
 const User = require('./models/user');
+const mongoSanitize = require('express-mongo-sanitize');
+
+const MongoDBStore = require("connect-mongo")(session);
+
+
+
 
 
 
@@ -29,7 +37,9 @@ const userRoutes = require('./routes/users');
 const campgroundRoutes = require('./routes/campgrounds');
 const reviewRoutes = require('./routes/reviews');
 
-mongoose.connect('mongodb://localhost:27017/yelp-camp').then(()=>{
+const dbUrl = process.env.DB_URL;
+// 'mongodb://localhost:27017/yelp-camp'
+mongoose.connect(dbUrl).then(()=>{
     console.log("Connected...");
 }).catch(err=>{
     console.log("Not connected");
@@ -44,14 +54,32 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 app.engine('ejs', ejsMate);
 app.use(express.static(path.join(__dirname, 'public')))
+app.use(mongoSanitize({
+    replaceWith: '_'
+}))
 
+
+const secret = process.env.SECRET || 'thisshouldbeabettersecret!';
+
+const store = new MongoDBStore({
+    url: dbUrl,
+    secret,
+    touchAfter: 24 * 60 * 60
+});
+
+store.on("error", function (e) {
+    console.log("SESSION STORE ERROR", e)
+})
 
 const sessionConfig = {
-    secret: 'thisshouldbeabettersecret!',
+    store,
+    name: 'my_session',
+    secret,
     resave: false,
     saveUninitialized: true,
     cookie: {
         httpOnly: true,
+        // secure: true,
         expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
         maxAge: 1000 * 60 * 60 * 24 * 7
     }
@@ -69,6 +97,7 @@ passport.deserializeUser(User.deserializeUser());
 
 
 app.use((req, res, next) => {
+    console.log(req.query);
     res.locals.currentUser = req.user;
     res.locals.success = req.flash('success');
     res.locals.error = req.flash('error');
